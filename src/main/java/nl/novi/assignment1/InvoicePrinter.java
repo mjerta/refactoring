@@ -1,4 +1,4 @@
-package nl.novi;
+package nl.novi.assignment1;
 
 public class InvoicePrinter {
   public void printInvoice(String customerName, double amount) {
