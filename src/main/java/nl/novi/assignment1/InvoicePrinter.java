@@ -1,34 +1,29 @@
 package nl.novi.assignment1;
 
 public class InvoicePrinter {
-  public void printInvoice(String customerName, double amount) {
-    printHeader();
-    printDetails(customerName, amount);
-    printFooter();
+  public String printInvoice(String customerName, double amount) {
+    StringBuilder invoice = new StringBuilder();
+    invoice.append(printHeader());
+    invoice.append(printDetails(customerName, amount));
+    invoice.append(printFooter());
+    System.out.println(invoice.toString());
+    return  invoice.toString();
   }
 
-  private void printFooter() {
-    printHorizontalLine();
-    print("Thank you for your business!");
+  private String printFooter() {
+    return printHorizontalLine() + "\nThank you for your business!";
   }
 
-  private String print(String x) {
-    System.out.println(x);
-    return x;
+  private String printHorizontalLine() {
+    return ("---------");
   }
 
-  private void printHorizontalLine() {
-    print("---------");
+  private String printDetails(String customerName, double amount) {
+    return "\nCustomer: " + customerName + "\nAmount: " + amount + "\n";
   }
 
-  private void printDetails(String customerName, double amount) {
-    print("Customer: " + customerName);
-    print("Amount: " + amount);
-  }
-
-  private void printHeader() {
-    print("Invoice");
-    printHorizontalLine();
+  private String printHeader() {
+    return "Invoice\n" + printHorizontalLine();
   }
 
 }
