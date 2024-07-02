@@ -1,8 +1,6 @@
 package nl.novi.assignment1;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 class InvoicePrinterTest {
@@ -22,7 +20,6 @@ class InvoicePrinterTest {
       "Thank you for your business!";
     // act
     assertEquals(expected, sut);
-
   }
 
 }

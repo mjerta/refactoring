@@ -4,7 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class OrderHistory {
-  private final static List<Order> orders = new ArrayList<>();
+  private final List<Order> orders;
+
+  public OrderHistory() {
+    this.orders = new ArrayList<>();
+  }
 
   public double getTotalOrderValue() {
     double total = 0;

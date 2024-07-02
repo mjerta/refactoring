@@ -1,17 +1,19 @@
 package nl.novi.assignment2;
 
 import lombok.Getter;
+import lombok.Setter;
 
 import java.util.Date;
 
+@Getter
+@Setter
 public class Order {
-  @Getter
   private double value;
-  private final Date date;
+  private Date date;
 
-  public Order(double value) {
+  public Order(double value, Date date) {
     this.value = value;
-    date = new Date();
+    this.date = date;
   }
 
   public boolean isLate() {
