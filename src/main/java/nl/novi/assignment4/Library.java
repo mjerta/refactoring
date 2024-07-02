@@ -12,13 +12,15 @@ public class Library {
     this.bookFilter = new BookFilter();
   }
 
-  public void printOutSearchResults(List<Book> books) {
+  public String printOutSearchResults(List<Book> books) {
+    StringBuilder output = new StringBuilder();
     for(Book book: books) {
       var title = book.getTitle();
       var author = book.getAuthor();
+      output.append("Title ").append(title).append(" Author: ").append(author).append("\n");
       System.out.println("Title " + title + " Author: " + author);
     }
-
+  return output.toString();
   }
 
   public List<Book> getBooksByAuthor(String author) {

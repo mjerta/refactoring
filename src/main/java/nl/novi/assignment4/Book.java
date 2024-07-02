@@ -15,7 +15,4 @@ public class Book {
     this.author = author;
     this.publicationYear = publicationYear;
   }
-
-
-// Constructor, Getters en Setters
 }
